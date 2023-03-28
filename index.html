@@ -47,18 +47,23 @@
 
     <!-- Login section Start -->
     <div class="login-form-container">
-      <i class="fas fa-times" id="form-close"></i>
-      <form action="">
-        <h3>Login</h3>
-        <input type="email" class="box" placeholder="enter your email" />
-        <input type="password" class="box" placeholder="enter your password" />
-        <input type="submit" class="btn" value="login now" />
-        <input type="checkbox" id="remember" />
-        <label for="remember">Remember me </label>
-        <p>forget password? <a href="#">Click here</a></p>
-        <p>don't have an account? <a href="#">register now</a></p>
-      </form>
-    </div>
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+         <h3>login</h3>
+         <input type="email" class="box" placeholder="enter your email">
+         <input type="password" class="box" placeholder="Enter your password">
+          <button type="submit" value="Login now" class="btn" id="form-btn" onclick="openPopup()">Login now</button>
+         <label for="remember">Remember me</label>
+         <p>forgrt password? <a href="#">click here</a></p>
+         <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+
+<div class ="popup" id ="popup">
+    <h2>welcome</h2>
+    <h3>you have successfully login</h3>
+    <button type="button" onclick="closePopup()">OK</button>
+</div>
+</div>
     <!-- Login Section End -->
 
     <!-- Home Section Start -->
