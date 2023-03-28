@@ -29,6 +29,14 @@ formBtn.addEventListener("click", () => {
 formClose.addEventListener("click", () => {
   loginForm.classList.remove("active");
 });
+let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
 // Login section End
 
 // Home Section start
