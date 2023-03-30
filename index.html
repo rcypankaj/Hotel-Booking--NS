@@ -56,12 +56,17 @@
          <h3>login</h3>
          <input type="email" class="box" placeholder="enter your email">
          <input type="password" class="box" placeholder="enter your email">
-         <input type="submit" value="login now" class="btn">
+         <button type="submit" value="Login now" class="btn" id="form-btn" onclick="openPopup()">Login now</button>
          <input type="checkbox" id="remember">
          <label for="remember">Remember me</label>
          <p>forgrt password? <a href="#">click here</a></p>
          <p>don't have and account? <a href="#">register now</a></p>
     </form>
+    <div class ="popup" id ="popup">
+        <h2>welcome</h2>
+        <h3>you have successfully login</h3>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
 </div>
 
 <!-- home section starts -->
@@ -530,27 +535,43 @@
             <img src="img/gallery/offer.png" alt="">
         </div>
 
-        <form action="">
+        <form action="" id="bookNow-form">
               <div class="inputBox">
                   <h3>where to</h3>
-                  <input type="text" placeholder="place name">
+                  <input type="text"  id="placeName"  name="placeName"placeholder="place name">
               </div>
               <div class="inputBox">
                 <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
+                <input type="number"  id="numOfGuests"  name="numOfGuests" placeholder="number of guests">
             </div>
             <div class="inputBox">
                 <h3>arrivals</h3>
-                <input type="date">
+                <input type="date"  id="arrivalDate" name="arrivalDate" >
             </div>
             <div class="inputBox">
                 <h3>leaving</h3>
-                <input type="date">
+                <input type="date"  id="leavingDate" name="leavingDates">
             </div>
-            <input type="submit" class="btn" value="book now">
+            <button type="button"  id="book-btn" class="btn" onclick="submitForm()">book now</button>
         </form>
     </div>
 </section>
+
+<form id="display-form" >
+    <h2>Display Form</h2>
+  
+    <label >Name</label><br>
+<input id="display-placeName" class="input-disable" type="text" readonly ><br>
+<label > num-guests</label><br>
+<input id="display-numOfGuests"  name="display-numOfGuests" class="input-disable" type="number" readonly><br>
+<label > Arrivals</label><br><br>
+<input id="display-arrivalDate"  name="display-arrivalDate"class="last-date input-disable" type="date" readonly><br>
+<label > Leaving</label><br>
+<input id="display-leavingDate"  name="display-leavingDate"class="last-date input-disable" type="date" readonly>
+
+
+  </form>
+  
 <!-- book section ends -->
 
 <!-- footer section -->

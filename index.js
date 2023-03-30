@@ -6,6 +6,21 @@ let formClose = document.querySelector("#form-close");
 let menu = document.querySelector("#menu-bar");
 let navbar = document.querySelector(".navbar");
 let videoBtn = document.querySelectorAll(".vid-btn");
+let bookBtn =document.querySelector("#book-btn")
+document.addEventListener("DOMContentLoaded", () => {
+  const bookNowForm = document.querySelector("#bookNow-form");
+
+  bookNowForm.addEventListener("click", (e) => {
+    e.preventDefault();
+    // rest of your code goes here
+  });
+});
+//console.log(bookNowForm);
+//bookBtn.addEventListener("click", () => {
+  //bookNowForm.classList.add("active");
+//});
+
+
 
 window.onscroll = () => {
   searchBtn.classList.remove("fa-times");
@@ -32,6 +47,16 @@ formBtn.addEventListener("click", () => {
 formClose.addEventListener("click", () => {
   loginForm.classList.remove("active");
 });
+/*popup button start-for login successful-*/
+let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+        /*pop up button ends*/
 
 videoBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -61,6 +86,22 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+function submitForm() {
+  // Get form data
+  const placeName = document.getElementById("placeName").value;
+  const numOfGuests = document.getElementById("numOfGuests").value;
+  const arrivalDate= document.getElementById("arrivalDate").value;
+  const leavingDate= document.getElementById("leavingDate").value;
+
+
+  // Set form data
+  document.getElementById("display-placeName").value = placeName;
+  document.getElementById("display-numOfGuests").value = numOfGuests;
+  document.getElementById("display-arrivalDate").value = arrivalDate;
+  document.getElementById("display-leavingDate").value = leavingDate;
+   document.getElementById("display-form").style.display = "block";
+  
+}
 
 var swiper = new Swiper(".brand-slider", {
   spaceBetween: 20,
