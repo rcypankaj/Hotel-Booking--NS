@@ -59,8 +59,8 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup");
 }
-/*pop up button ends*/
 
+/*pop up button ends*/
 videoBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelector(".controls .active").classList.remove("active");
@@ -89,6 +89,7 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+
 function submitForm() {
   // Get form data
   const placeName = document.getElementById("placeName").value;
@@ -147,7 +148,7 @@ bookNowForm.addEventListener("submit", (e) => {
   popupClose.addEventListener("click", (e) => {
     popupSucces.style.display = "none";
   });
-  console.log(whereTo, howMany, arrivingDate, leavingDate);
+  // console.log(whereTo, howMany, arrivingDate, leavingDate);
 });
 
 /// login popup
@@ -163,7 +164,7 @@ loginForm.addEventListener("submit", (e) => {
   loginForm.classList.remove("active");
   modalHeading.innerText = "Login Status";
   modalStatus.innerText = "Login successfully😊😊";
-  modalLocation.innerText = `Welcome ${username}❤️‍🩹❤️‍🩹`;
+  modalLocation.innerText = `🙏Welcome ${username}🙏`;
   modalDays.textContent = "";
   modalArrivingDate.innerText = "";
   modalLeavingDate.innerText = "";
